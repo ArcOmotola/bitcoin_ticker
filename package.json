@@ -1,0 +1,38 @@
+{
+  "name": "ticker-redux-toolkit",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.4",
+    "@types/styled-components": "^5.1.25",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-query": "^3.39.0",
+    "react-redux": "^8.0.2",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.9"
+  },
+  "description": "This is the files to my video tutorial on https://youtube.com/weibenfalk",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArcOmotola/bitcoin_ticker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArcOmotola/bitcoin_ticker/issues"
+  },
+  "homepage": "https://github.com/ArcOmotola/bitcoin_ticker#readme"
+}
