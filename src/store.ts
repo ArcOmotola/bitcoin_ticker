@@ -1,12 +1,15 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 
 //slice reducers
 import appReducer from "./features/appSlice";
+import { bitcoinApi } from "./services/app";
 
 export const store = configureStore({
     reducer: {
+        [bitcoinApi.reducerPath]: bitcoinApi.reducer,
         app: appReducer
-    }
+    },
+    middleware: getDefaultMiddleware => getDefaultMiddleware().concat(bitcoinApi.middleware)
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
