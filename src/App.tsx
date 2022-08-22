@@ -25,7 +25,7 @@ const App = () => {
 
   const handleCurrencySelection = (e: any) => dispatch(changeCurrency(e.currentTarget.value));
 
-  if (isLoading) return <div>Loading ...</div>;
+  if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Something went horrible wrong ...</div>;
 
   console.log("currency>>", currency);
