@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   div {
     font-size: 3rem;
     background: lightblue;
-    padding: 20px 40px;
+    padding: 15px 40px;
     border-radius: 40px;
     margin-top: 40px;
   }
