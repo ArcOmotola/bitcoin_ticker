@@ -1,32 +1,28 @@
-import { useQuery } from 'react-query';
-
-
+import { useQuery } from "react-query";
 
 // Hooks
-import { useAppSelector, useAppDispatch } from './reduxHooks';
-import { useGetBitcoinDataQuery } from './services/app';
+import { useAppSelector, useAppDispatch } from "./reduxHooks";
+import { useGetBitcoinDataQuery } from "./services/app";
 // Types
-import { BitcoinData } from './bitcoinTypes';
+import { BitcoinData } from "./bitcoinTypes";
 // Styles
-import { Wrapper } from './App.styles';
+import { Wrapper } from "./App.styles";
 // Act
-import { changeCurrency } from './features/appSlice';
-
-
+import { changeCurrency } from "./features/appSlice";
 
 // const INTERVAL_TIME = 5000; // ms
 
 const App = () => {
-
-  const { currency } = useAppSelector(state => state.app)
+  const { currency } = useAppSelector((state) => state.app);
   const dispatch = useAppDispatch();
 
   const { data, isLoading, error } = useGetBitcoinDataQuery(undefined);
 
-  const handleCurrencySelection = (e: any) => dispatch(changeCurrency(e.currentTarget.value));
+  const handleCurrencySelection = (e: any) =>
+    dispatch(changeCurrency(e.currentTarget.value));
 
   if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Oops, Something went horrible wrong ...</div>;
+  if (error) return <div>Oopss, Something went horrible wrong ...</div>;
 
   console.log("currency>>", currency);
 
@@ -36,7 +32,7 @@ const App = () => {
         <h2>Bitcoin Price</h2>
         <select value={currency} onChange={handleCurrencySelection}>
           {data &&
-            Object.keys(data).map(currency => (
+            Object.keys(data).map((currency) => (
               <option key={currency} value={currency}>
                 {currency}
               </option>
